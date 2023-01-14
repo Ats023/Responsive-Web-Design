@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="techdoc.css">
+        <!--NUMPY DOCUMENTATION PAGE-->
+        <body>
+            <nav id="navbar">
+                <header>Numpy Basic</header>
+                <ul>
+                    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                    <li><a class="nav-link" href="#Create_Array">Create Array</a></li>
+                    <li><a class="nav-link" href="#Array_Indexing">Array Indexing</a></li>
+                    <li><a class="nav-link" href="#Array_Slicing">Array Slicing</a></li>
+                    <li><a class="nav-link" href="#Array_Shape">Array Shape</a></li>
+                </ul>
+            </nav>
+
+            <main id="main-doc">
+                <section class="main-section" id="Introduction">
+                    <header>Introduction</header>
+                    <p>NumPy is a general-purpose array-processing package. It provides a high-performance multidimensional array object, and tools for working with these arrays. It is the fundamental package for scientific computing with Python. It is open-source software. It contains various features including these important ones:</p>
+                    <ul>
+                        <li>A powerful N-dimensional array object</li>
+                        <li>Sophisticated (broadcasting) functions</li>
+                        <li>Tools for integrating C/C++ and Fortran code</li>
+                        <li>Useful linear algebra, Fourier transform, and random number capabilities</li>
+                        <li>Storage at one continuous place in memory unlike lists, so processes can access and manipulate them very efficiently.</li>
+                    </ul>
+                </section>
+
+                <section class="main-section" id="Create_Array">
+                    <header>Create Array</header>
+                    <p>NumPy’s main object is the homogeneous multidimensional array. It is a table of elements (usually numbers), all of the same type, indexed by a tuple of positive integers. We can create a NumPy ndarray object by using the array() function.
+                    </p>
+                    <code class="input">
+                        import numpy as np
+
+                        arr = np.array([1, 2, 3, 4, 5])
+                        print(arr)
+                        print(type(arr))
+
+                    </code>
+                    <p>This will give the output: </p>
+                    <code class="output">
+                        [1 2 3 4 5]
+                        &ltclass 'numpy.ndarray'&gt
+
+                        </code>
+                </section>
+
+                <section class="main-section" id="Array_Indexing">
+                    <header>Array Indexing</header>
+                    <p>Knowing the basics of array indexing is important for analysing and manipulating the array object. You can access an array element by referring to its index number. The indexes in NumPy arrays start with 0, meaning that the first element has index 0, and the second has index 1 etc.</p>
+                    <code class="input">
+                        import numpy as np
+
+                        arr = np.array([7, 3, 8, 9])
+                        print('The first element of the array is', arr[0])
+
+                    </code>
+                    <p>This will give the output: </p>
+                    <code class="output">
+                        The first element of the array is 7
+
+                    </code>
+                </section>
+
+                <section class="main-section" id="Array_Slicing">
+                    <header>Array Slicing</header>
+                    <p>
+                        Slicing in python means taking elements from one given index to another given index. We pass slice instead of index like this: [start:end]. We can also define the step, like this: [start:end:step]. By default the start is considered 0 and end is considered lentgh of array in that dimension.
+                    </p>
+                    <code class="input">
+                        import numpy as np
+
+                        arr = np.array([1, 2, 3, 4, 5, 6, 7])
+                        print(arr[1:5])
+
+                    </code>
+                    <p>This will give the output: </p>
+                    <code class="output">
+                        [2 3 4 5]
+
+                    </code>
+                </section>
+
+                <section class="main-section" id="Array_Shape">
+                    <header>Array Shape</header>
+                    <p>NumPy arrays have an attribute called shape that returns a tuple with each index having the number of corresponding elements. Integers at every index tells about the number of elements the corresponding dimension has.</p>
+                    <code class="input">
+                        import numpy as np
+
+                        arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+                        print(arr.shape)  
+
+                    </code>
+                    <p>This gives the output: </p>
+                    <code class="output">
+                        (2,4)
+
+                    </code>
+                    <p>which means that the array has 2 dimensions, where the first dimension has 2 elements and the second has 4.</p>
+                </section>
+            </main>
+
+        </body>
+    </head>
+</html>
