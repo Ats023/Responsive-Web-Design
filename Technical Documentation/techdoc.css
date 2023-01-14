@@ -1,0 +1,111 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100vh;
+    width: 20vw;
+    background-color: black;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+nav li {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+
+nav a {
+    display: block;
+    padding: 1em;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+#main-doc {
+    display: block;
+    position: absolute;
+    margin-left: 20vw;
+    padding: 1em 2em;
+}
+
+.main-section {
+    padding: 1em;
+    border-bottom: 1px solid rgb(226, 202, 156);
+}
+
+header {
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+#navbar header {
+    text-align: center;
+    font-size: 1.8em;
+    padding: 0.5em;
+}
+
+code {
+    white-space: pre-line;
+}
+
+.input {
+    display: block;
+    width: 20vw;
+    background-color: bisque;
+    padding: 0 3em;
+}
+
+.output {
+    display: block;
+    width: 20vw;
+    padding: 0 3em;
+    color: white;
+    background-color: black;
+}
+
+@media only screen and (max-width: 700px) {
+    #navbar ul {
+        width: 100%;
+        height: 150px;
+    }
+
+    #navbar {
+        position: sticky;
+        top: 0;
+        padding: 0;
+        width: 100%;
+        max-height: 180px;
+        z-index: 1;
+    }
+
+
+    #main-doc {
+        position: relative;
+        margin-left: 0;
+        margin-top: 40px;
+        padding: 0.5em;
+    }
+
+    .input, .output {
+        width: 50vw;
+    }
+    
+}
